@@ -1,0 +1,215 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;              /* add this */
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+  background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
+  font-family: "Poppins", sans-serif;
+}
+
+.loginBox {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.15); /* transparent background */
+  border-radius: 16px;                  /* rounded corners */
+  backdrop-filter: blur(10px);          /* blur the background */
+  -webkit-backdrop-filter: blur(20px);  /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.093); /* subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.092);  /* soft shadow */
+  padding: 40px;
+  color: #fff; /* text color */
+  justify-content: center;
+  align-items: center;
+}
+
+.formTitle {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.socMedLogIn {
+  display: flex;
+  justify-content: center;
+  gap: 15px;   /* space between icons */
+  margin: 20px 0;
+}
+
+.socmedButton {
+  width: 45px;             /* square buttons */
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;      /* circle shape */
+  border: 1px solid rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.121);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.176);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.socmedButton:hover {
+  background: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.176);  
+}
+
+.socmedIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.ORseparator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  color: #c5c5c5;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.ORseparator::before,
+.ORseparator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.ORseparator:not(:empty)::before {
+  margin-right: 8px;
+}
+.ORseparator:not(:empty)::after {
+  margin-left: 8px;
+}
+
+.loginFORM {
+  text-align: left;
+}
+
+.infoWrapper {
+  margin-bottom: 15px;
+}
+
+.inputLabel {
+  display: block;
+  margin-bottom: 3px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.inputArea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+.inputArea::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.inputArea:focus {
+  outline: none;
+  border: 0.5px solid #fff;
+  box-shadow: 0 0 8px rgba(255,255,255,0.6);
+}
+
+.forgotPassword {
+  position: relative;
+  display:inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #c5c5c5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgotPassword:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+.loginButton {
+  width: 100%;
+  padding: 12px;
+  margin-top: 2px;
+  background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+  background-size: 300% 300%; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.176);    
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.loginButton:hover:enabled {
+  background: linear-gradient(45deg, #23d5ab, #f48e21, #7462ff, #d2001a);
+  background-size: 300% 300%; 
+  transform: translateY(-2px) scale(1.02);
+}
+
+.loginButton:active:enabled {
+  background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+  background-size: 300% 300%;
+}
+
+.loginButton:disabled {
+  background: #cccccc00;          /* greyed out */
+  color: #ffffff9c;
+  cursor: not-allowed;
+}
+
+.errorText {
+  color: #ffffff;       /* a nice red (Bootstrap danger color) */
+  font-size: 10px;
+  font-weight: 500;
+  min-height: 20px;
+  margin-top: 2px;
+  position: absolute;
+}
+
+.registerPhrase {
+  font-size: 10px;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #ffffff78;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.registerPhrase .registerText {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@keyframes color {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
